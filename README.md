@@ -158,7 +158,7 @@ Ax = b
 which is equivalent to minimizing the quadratic function
 
 \[
-f(x) = \frac{1}{2}x^T A x - b^T x
+f(x) = (1/2)x^T A x - b^T x
 \]
 
 The Conjugate Gradient method iteratively updates:
@@ -178,29 +178,6 @@ r_{k+1} = r_k - alpha_k A p_k
 beta_k = (r_(k+1)ᵀ r_(k+1)) / (r_kᵀ r_k)
 
 p_(k+1) = r_(k+1) + beta_k p_k
-
-1. Choose initial guess \(x_0\)
-2. Compute initial residual:
-
-\[
-r_0 = b - Ax_0
-\]
-
-3. Set search direction:
-
-\[
-p_0 = r_0
-\]
-
-4. For each iteration:
-
-- Compute step size \( \alpha_k \)
-- Update solution \( x_{k+1} \)
-- Update residual \( r_{k+1} \)
-- Compute \( \beta_k \)
-- Update search direction \( p_{k+1} \)
-
-5. Stop when residual norm is small.
 
 For an n*n matrix, the Conjugate Gradient method converges in **at most \(n\) iterations** in exact arithmetic.
 
