@@ -148,12 +148,7 @@ The **Conjugate Gradient method** is an **iterative algorithm** that solves syst
 - The matrix is **sparse**
 - The matrix is **symmetric positive definite**
 
-The algorithm improves upon **Steepest Descent** by generating **conjugate search directions**, allowing faster convergence.
-
----
-
-# 🧮 Mathematical Idea
-
+The algorithm improves upon **Steepest Descent** by generating **conjugate search directions**, allowing faster convergence
 We want to solve
 
 \[
@@ -174,27 +169,15 @@ The Conjugate Gradient method iteratively updates:
 
 Key formulas used:
 
-### Step Size
-
 alpha_k = (r_kᵀ r_k) / (p_kᵀ A p_k)
-
-### Solution Update
 
 x_(k+1) = x_k + alpha_k p_k
 
-### Residual Update
-
 r_{k+1} = r_k - alpha_k A p_k
-
-### Direction Update
 
 beta_k = (r_(k+1)ᵀ r_(k+1)) / (r_kᵀ r_k)
 
 p_(k+1) = r_(k+1) + beta_k p_k
-
----
-
-# ⚙️ Algorithm Steps
 
 1. Choose initial guess \(x_0\)
 2. Compute initial residual:
@@ -219,11 +202,7 @@ p_0 = r_0
 
 5. Stop when residual norm is small.
 
----
-
-# 📊 Convergence
-
-For an \(n \times n\) matrix, the Conjugate Gradient method converges in **at most \(n\) iterations** in exact arithmetic.
+For an n*n matrix, the Conjugate Gradient method converges in **at most \(n\) iterations** in exact arithmetic.
 
 In practice it often converges much faster.
 
