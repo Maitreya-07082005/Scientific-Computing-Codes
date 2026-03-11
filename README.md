@@ -141,19 +141,6 @@ This helps illustrate the classic **zig-zag behaviour of steepest descent**.
 
 ---
 
-# 📊 Visualization
-
-Some scripts include visualization such as:
-
-* Contour plots of quadratic functions
-* Optimization paths
-* Convergence plots
-* Image reconstruction comparisons
-
-These visualizations make the algorithms easier to understand.
-
----
-
 # 🎯 Learning Goals
 
 This repository helps demonstrate:
@@ -180,16 +167,6 @@ Some helpful resources:
 # 🤝 Contributions
 
 Contributions are welcome!
-
-Possible improvements:
-
-* Add QR decomposition
-* Implement GMRES
-* Add PCA examples
-* Improve visualization tools
-* Add benchmarking comparisons
-
----
 
 # 📜 License
 
