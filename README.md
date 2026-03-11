@@ -154,38 +154,6 @@ These visualizations make the algorithms easier to understand.
 
 ---
 
-# 🛠 Requirements
-
-Install dependencies:
-
-```bash
-pip install numpy matplotlib pillow
-```
-
-Used libraries:
-
-* `numpy`
-* `matplotlib`
-* `Pillow` (for image compression example)
-
----
-
-# 📁 Structure
-
-```
-numerical-linear-algebra-algorithms
-│
-├── gaussian_elimination.py
-├── lu_decomposition.py
-├── svd.py
-├── svd_image_compression.py
-├── steepest_descent.py
-│
-└── README.md
-```
-
----
-
 # 🎯 Learning Goals
 
 This repository helps demonstrate:
@@ -195,6 +163,7 @@ This repository helps demonstrate:
 * Numerical stability issues
 * Visualization of optimization behaviour
 * Practical use of linear algebra in applications
+* And the most important goal - To have all linear algebra algorithms in a single repo!
 
 ---
 
