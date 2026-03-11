@@ -54,13 +54,13 @@ Applications:
 Decomposes a matrix into
 
 [
-A = U \Sigma V^T
+A = U Σ V^T
 ]
 
 where:
 
 * (U) = left singular vectors
-* (\Sigma) = singular values
+* (Σ) = singular values
 * (V) = right singular vectors
 
 Applications:
@@ -81,7 +81,7 @@ Idea:
 Instead of storing the full image matrix (A), approximate it as
 
 [
-A_k = U_k \Sigma_k V_k^T
+A_k = U_k Σ_k V_k^T
 ]
 
 where (k) is a small rank.
@@ -105,7 +105,7 @@ The repository includes scripts that show:
 Optimization algorithm used to minimize quadratic functions:
 
 [
-f(x) = \frac{1}{2}x^T A x - b^T x
+f(x) = (1/2)x^T A x - b^T x
 ]
 
 Features in the repository:
@@ -147,7 +147,7 @@ Used libraries:
 
 ---
 
-# 📁 Example Structure
+# 📁 Structure
 
 ```
 numerical-linear-algebra-algorithms
