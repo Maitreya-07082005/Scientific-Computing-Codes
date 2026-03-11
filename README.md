@@ -140,7 +140,94 @@ Features in the repository:
 This helps illustrate the classic **zig-zag behaviour of steepest descent**.
 
 ---
+### 7. Conjugate Gradient Method
+Direct methods like Gaussian Elimination require \(O(n^3)\) operations and large memory usage.  
+The **Conjugate Gradient method** is an **iterative algorithm** that solves systems more efficiently when:
 
+- The matrix is **large**
+- The matrix is **sparse**
+- The matrix is **symmetric positive definite**
+
+The algorithm improves upon **Steepest Descent** by generating **conjugate search directions**, allowing faster convergence.
+
+---
+
+# 🧮 Mathematical Idea
+
+We want to solve
+
+\[
+Ax = b
+\]
+
+which is equivalent to minimizing the quadratic function
+
+\[
+f(x) = \frac{1}{2}x^T A x - b^T x
+\]
+
+The Conjugate Gradient method iteratively updates:
+
+- Residual vector \(r_k\)
+- Search direction \(p_k\)
+- Solution vector \(x_k\)
+
+Key formulas used:
+
+### Step Size
+
+alpha_k = (r_kᵀ r_k) / (p_kᵀ A p_k)
+
+### Solution Update
+
+x_(k+1) = x_k + alpha_k p_k
+
+### Residual Update
+
+r_{k+1} = r_k - alpha_k A p_k
+
+### Direction Update
+
+beta_k = (r_(k+1)ᵀ r_(k+1)) / (r_kᵀ r_k)
+
+p_(k+1) = r_(k+1) + beta_k p_k
+
+---
+
+# ⚙️ Algorithm Steps
+
+1. Choose initial guess \(x_0\)
+2. Compute initial residual:
+
+\[
+r_0 = b - Ax_0
+\]
+
+3. Set search direction:
+
+\[
+p_0 = r_0
+\]
+
+4. For each iteration:
+
+- Compute step size \( \alpha_k \)
+- Update solution \( x_{k+1} \)
+- Update residual \( r_{k+1} \)
+- Compute \( \beta_k \)
+- Update search direction \( p_{k+1} \)
+
+5. Stop when residual norm is small.
+
+---
+
+# 📊 Convergence
+
+For an \(n \times n\) matrix, the Conjugate Gradient method converges in **at most \(n\) iterations** in exact arithmetic.
+
+In practice it often converges much faster.
+
+---
 # 🎯 Learning Goals
 
 This repository helps demonstrate:
