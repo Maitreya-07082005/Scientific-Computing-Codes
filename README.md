@@ -1,7 +1,6 @@
 # Numerical Linear Algebra Algorithms (Python)
 
-A collection of **core numerical linear algebra algorithms implemented in Python**, along with visualization and practical applications such as **image compression using SVD**.
-
+A collection of **core numerical linear algebra algorithms implemented in Python**, along with visualization and practical applications such as.
 This repository is intended for **learning, experimentation, and demonstration of numerical optimization and matrix factorization techniques** commonly used in scientific computing, machine learning, and data science.
 
 ---
@@ -71,8 +70,32 @@ Applications:
 * Noise reduction
 
 ---
+### 5. QR Decomposition
 
-### 4. Image Compression using SVD
+QR Decomposition factorizes a matrix \(A\) into the product of two matrices:
+
+\[
+A = QR
+\]
+
+where:
+
+- \(Q\) is an **orthogonal matrix**  
+- \(R\) is an **upper triangular matrix**
+
+An orthogonal matrix satisfies:
+
+\[
+Q^T Q = I
+\]
+
+which means its columns form an **orthonormal basis**.
+
+QR decomposition is widely used because it is **numerically stable** compared to methods like Gaussian elimination.
+
+---
+
+### 5. Image Compression using SVD
 
 Demonstrates how **low-rank approximations** can compress images.
 
@@ -100,7 +123,7 @@ The repository includes scripts that show:
 * 
 ---
 
-### 5. Steepest Descent Method
+### 6. Steepest Descent Method
 
 Optimization algorithm used to minimize quadratic functions:
 
